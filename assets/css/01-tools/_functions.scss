@@ -26,5 +26,9 @@
 }
 
 @function ratio-space ($size) {
-    @return $size * 8;
+    @return calc($size * 8px);
+}
+
+@function cols ($cols) {
+    @return calc($cols * 100% / 12);
 }

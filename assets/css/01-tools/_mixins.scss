@@ -1,5 +1,5 @@
 /** https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6 **/
-@mixin font-face($name, $path, $weight: 500, $style: Regular, $exts: eot woff2 woff ttf svg) {
+@mixin font-face($name, $path, $weight: 500, $style: normal, $exts: eot woff2 woff ttf svg) {
     $src: null;
 
     $extmods: (

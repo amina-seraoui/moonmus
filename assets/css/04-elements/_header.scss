@@ -1,0 +1,16 @@
+header {
+  @extend %flex;
+  background: $secondary-color;
+  align-items: center;
+  padding: ratio-space(3);
+
+  .navbar {
+    @extend %flex;
+    width: 100%;
+    justify-content: space-between;
+
+    ul {
+      @extend %flex;
+    }
+  }
+}

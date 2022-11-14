@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>Moonmus{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/svg" href="assets/img/logo.svg">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
     <body>
         <header>
-            <div class="logo"></div>
+            <img src="assets/img/logo.svg" alt="Moonmus Logo" class="logo" width="64" height="64" />
             <nav class="navbar" id="main-navbar">
                 <ul>
                     <li class="active"><a href="{{ path('home') }}">Accueil</a></li>
@@ -18,8 +19,8 @@
                     <li><a href="{{ path('home') }}">Connexion</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#"><span>Mon Compte</span></a></li>
-                    <li><a href="#"><span>Panier</span></a></li>
+                    <li><a href="#"><img src="assets/img/user.svg" alt="Icône utilisateur" width="24" height="24"></a></li>
+                    <li><a href="#"><img src="assets/img/cart.svg" alt="Icône chariot" width="24" height="24"></a></li>
                 </ul>
             </nav>
         </header>
@@ -28,8 +29,8 @@
 
         <footer>
             <div>
-                <p>Copyright © 2022 - Amina Seraoui. Tous droits réservés.</p>
-                <img src="" alt="">.logo
+                <p>Copyright © 2022 - <a href="https://amina-seraoui.vercel.app/fr">Amina Seraoui</a>. Tous droits réservés.</p>
+                <img src="assets/img/logo.svg" alt="Moonmus Logo" class="logo" width="128" height="128" />
             </div>
             <nav>
                 <ul data-title="Catégories">
@@ -45,10 +46,10 @@
                     <li><a href="#">Service client</a></li>
                 </ul>
                 <ul data-title="Retrouvez-nous">
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#"><img src="assets/img/insta.svg" alt="Icône Instagram" width="32" height="32"></a></li>
+                    <li><a href="#"><img src="assets/img/fb.svg" alt="Icône Facebook" width="32" height="32"></a></li>
+                    <li><a href="#"><img src="assets/img/twitter.svg" alt="Icône Twitter" width="32" height="32"></a></li>
+                    <li><a href="#"><img src="assets/img/tiktok.svg" alt="Icône Tiktok" width="32" height="32"></a></li>
                 </ul>
             </nav>
         </footer>

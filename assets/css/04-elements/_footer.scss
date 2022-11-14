@@ -1,0 +1,44 @@
+footer {
+  @extend %flex;
+  background: $secondary-color;
+  justify-content: space-between;
+  padding: ratio-space(3);
+
+  .logo {
+    padding-top: ratio-space(2);
+  }
+
+  nav {
+    @extend %flex;
+    width: cols(6);
+
+    ul {
+      width: cols(4);
+
+      &::before {
+        @extend h3;
+        content: attr(data-title);
+        width: 100%;
+      }
+      
+      li {
+        font-style: italic;
+        font-weight: 300;
+        padding-top: ratio-space(.5);
+      }
+
+      li:first-child {
+        padding-top: ratio-space(1);
+      }
+    }
+
+    ul:last-child {
+      @extend %flex;
+      flex-wrap: wrap;
+
+      li {
+        padding: 0;
+      }
+    }
+  }
+}
