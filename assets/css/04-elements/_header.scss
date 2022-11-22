@@ -4,13 +4,100 @@ header {
   align-items: center;
   padding: ratio-space(3);
 
-  .navbar {
-    @extend %flex;
+  .menu-burger {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    justify-content: space-between;
 
-    ul {
-      @extend %flex;
+    .navbar {
+      nav {
+        @extend %flex;
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+
+        ul {
+          @extend %flex;
+
+          li {
+            transition: .3s;
+            &.active, &:hover {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      >.linked-icon {
+        display: none;
+        position: absolute;
+        top: ratio-space(3);
+        z-index: 1;
+        cursor: pointer;
+
+        &.open {
+          right: ratio-space(3);
+        }
+
+        &.close {
+          left: ratio-space(3);
+        }
+      }
+    }
+  }
+
+  @media #{$media-down-md} {
+    .menu-burger {
+      color: $white;
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        nav {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          padding: ratio-space(3);
+
+          flex-direction: column-reverse;
+          justify-content: flex-end;
+          align-items: end;
+          text-align: right;
+
+          background: $primary-color;
+
+          transition: .5s;
+
+          ul:first-of-type {
+            flex-direction: column;
+          }
+        }
+
+        .open {
+          display: block;
+        }
+      }
+
+      &.active {
+        .navbar {
+          nav {
+            left: 0;
+          }
+
+          .open {
+            display: none;
+          }
+
+          .close {
+            display: block;
+          }
+        }
+      }
     }
   }
 }

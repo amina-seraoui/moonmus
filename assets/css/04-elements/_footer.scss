@@ -4,7 +4,7 @@ footer {
   justify-content: space-between;
   padding: ratio-space(3);
 
-  .logo {
+  .copyright {
     padding-top: ratio-space(2);
   }
 
@@ -40,5 +40,19 @@ footer {
         padding: 0;
       }
     }
+  }
+
+  @media #{$media-down-lg} {
+    nav {
+      flex-direction: column;
+      ul {
+        width: 100%;
+      }
+    }
+  }
+
+  @media #{$media-down-md} {
+    flex-direction: column-reverse;
+    width: 100%;
   }
 }

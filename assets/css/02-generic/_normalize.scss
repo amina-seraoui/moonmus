@@ -22,6 +22,11 @@ q:after {
     font: inherit;
     color: inherit;
     z-index: 0;
+
+    &::selection {
+        background: $primary-color;
+        color: $white;
+    }
 }
 
 html, body {
@@ -29,4 +34,5 @@ html, body {
     font-size: $font-size;
     color: $font-color;
     font-weight: 400;
+    overflow-x: hidden;
 }
