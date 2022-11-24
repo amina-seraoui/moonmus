@@ -14,24 +14,20 @@
     <body>
         <header>
             <img src="assets/img/logo.svg" alt="Moonmus Logo" class="logo" width="64" height="64" />
-            <div class="menu-burger active">
-                <div class="navbar">
-                    <img src="assets/img/close.svg" alt="Icône Instagram" width="32" height="32" class="linked-icon close"/>
-                    <img src="assets/img/menu.svg" alt="Icône Instagram" width="32" height="32" class="linked-icon open"/>
-                    <nav>
-                        <ul>
-                            <li class="active"><a href="{{ path('home') }}">Accueil</a></li>
-                            <li><a href="{{ path('home') }}">Boutique</a></li>
-                            <li><a href="{{ path('home') }}">Inscription</a></li>
-                            <li><a href="{{ path('home') }}">Connexion</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#"><img src="assets/img/user.svg" alt="Icône utilisateur" width="24" height="24" class="linked-icon"></a></li>
-                            <li><a href="#"><img src="assets/img/cart.svg" alt="Icône chariot" width="24" height="24" class="linked-icon"></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            <img src="assets/img/close.svg" alt="Icône Instagram" width="32" height="32" class="linked-icon close"/>
+            <img src="assets/img/menu.svg" alt="Icône Instagram" width="32" height="32" class="linked-icon open"/>
+            <nav class="menu-burger">
+                <ul>
+                    <li class="active"><a href="{{ path('home') }}">Accueil</a></li>
+                    <li><a href="{{ path('home') }}">Boutique</a></li>
+                    <li><a href="{{ path('home') }}">Inscription</a></li>
+                    <li><a href="{{ path('home') }}">Connexion</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><img src="assets/img/user.svg" alt="Icône utilisateur" width="24" height="24" class="linked-icon"></a></li>
+                    <li><a href="#"><img src="assets/img/cart.svg" alt="Icône chariot" width="24" height="24" class="linked-icon"></a></li>
+                </ul>
+            </nav>
         </header>
 
         {% block body %}{% endblock %}
