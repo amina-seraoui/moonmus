@@ -1,0 +1,13 @@
+.pagination {
+  padding-bottom: ratio-space(8);
+  text-align: center;
+
+  .btn {
+    min-width: 34px;
+    @extend .secondary;
+
+    &.active {
+      @extend .primary;
+    }
+  }
+}

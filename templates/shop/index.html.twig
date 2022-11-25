@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} | Boutique{% endblock %}
+
+{% block body %}
+    <main id="shop">
+        <nav class="nav-shop">
+            <ul>
+                <li class="active"><a href="{{ path('shop.index') }}">Femmes</a></li>
+                <li><a href="{{ path('shop.index') }}">Hommes</a></li>
+                <li><a href="{{ path('shop.index') }}">Maison</a></li>
+                <li><a href="{{ path('shop.index') }}">Livres</a></li>
+                <li><a href="{{ path('shop.index') }}">Soins</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h1>Femmes</h1>
+            <div id="products">
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">
+                    <div class="description">
+                        <span class="price">35.99€</span>
+                        <h5 class="title">Abaya Satinée Maryam</h5>
+                        <a href="#" class="btn secondary">Voir l'article</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <a href="" class="btn btn_page active">1</a>
+            <a href="" class="btn btn_page">1</a>
+            <a href="" class="btn btn_page">1</a>
+            <span>...</span>
+            <a href="" class="btn btn_page">1</a>
+            <a href="" class="btn btn_page">10</a>
+        </div>
+    </main>
+{% endblock %}
