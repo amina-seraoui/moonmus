@@ -14,4 +14,12 @@ class ShopController extends AbstractController
     {
         return $this->render('shop/index.html.twig');
     }
+
+    #[Route('/{slug}', name: 'category')]
+    public function category(): Response
+    {
+        return $this->render('shop/index.html.twig', [
+            'category' => ''
+        ]);
+    }
 }

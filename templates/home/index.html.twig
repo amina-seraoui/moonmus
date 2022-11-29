@@ -55,26 +55,14 @@
                     </div>
                 </div>
                 <div class="links">
-                    <a href="#" class="link">
-                        <img src="{{ asset('assets/img/woman.png') }}" alt="Femmes" width="220" height="160">
-                        <h4>Femmes</h4>
-                    </a>
-                    <a href="#" class="link">
-                        <img src="{{ asset('assets/img/books.png') }}" alt="Livres" width="220" height="160">
-                        <h4>Livres</h4>
-                    </a>
-                    <a href="#" class="link">
-                        <img src="{{ asset('assets/img/care.png') }}" alt="Soins" width="220" height="160">
-                        <h4>Soins</h4>
-                    </a>
-                    <a href="#" class="link">
-                        <img src="{{ asset('assets/img/man.png') }}" alt="Hommes" width="220" height="160">
-                        <h4>Hommes</h4>
-                    </a>
-                    <a href="#" class="link">
-                        <img src="{{ asset('assets/img/home.png') }}" alt="Maison" width="220" height="160">
-                        <h4>Maison</h4>
-                    </a>
+                    {% if (categories) %}
+                        {% for category in categories %}
+                            <a href="{{ path('shop.category', { slug: category.slug }) }}" class="link">
+                                <img src="{{ vich_uploader_asset(category, 'imageFile') | imagine_filter('categories') }}" alt="{{ category.name }}" width="220" height="160">
+                                <h4>{{ category.name }}</h4>
+                            </a>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </section>
