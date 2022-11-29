@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,10 +17,10 @@ class ShopController extends AbstractController
     }
 
     #[Route('/{slug}', name: 'category')]
-    public function category(): Response
+    public function category(Category $category): Response
     {
         return $this->render('shop/index.html.twig', [
-            'category' => ''
+            'category_actual' => $category
         ]);
     }
 }

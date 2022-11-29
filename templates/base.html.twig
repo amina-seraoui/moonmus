@@ -21,10 +21,18 @@
                     <li><a href="{{ path('admin') }}">Administration</a></li>
                 </ul>
                 <ul>
-                    <li class="active"><a href="{{ path('home') }}">Accueil</a></li>
-                    <li><a href="{{ path('home') }}">Boutique</a></li>
-                    <li><a href="{{ path('home') }}">Inscription</a></li>
-                    <li><a href="{{ path('home') }}">Connexion</a></li>
+                    <li {{ (page is defined and page == 'home') ? 'class="active"' : null }}>
+                        <a href="{{ path('home') }}">Accueil</a>
+                    </li>
+                    <li {{ (page is defined and page == 'shop') ? 'class="active"' : null }}>
+                        <a href="{{ path('shop.index') }}">Boutique</a>
+                    </li>
+                    <li {{ (page is defined and page == 'register') ? 'class="active"' : null }}>
+                        <a href="{{ path('home') }}">Inscription</a>
+                    </li>
+                    <li {{ (page is defined and page == 'login') ? 'class="active"' : null }}>
+                        <a href="{{ path('home') }}">Connexion</a>
+                    </li>
                 </ul>
                 <ul>
                     <li><a href="#"><img src="{{ asset('assets/img/user.svg') }}" alt="Icône utilisateur" width="24" height="24" class="linked-icon"></a></li>
@@ -41,13 +49,15 @@
                 <p class="copyright">Copyright © 2022 - <a href="https://amina-seraoui.vercel.app/fr">Amina Seraoui</a>. Tous droits réservés.</p>
             </div>
             <nav>
-                <ul data-title="Catégories">
-                    <li><a href="#">Femmes</a></li>
-                    <li><a href="#">Hommes</a></li>
-                    <li><a href="#">Livres</a></li>
-                    <li><a href="#">Soins</a></li>
-                    <li><a href="#">Maison</a></li>
-                </ul>
+                {% if (categories) %}
+                    <ul data-title="Catégories">
+                        {% for category in categories %}
+                            <li {{ (page is defined and page == 'login') ? 'class="active"' : null }}>
+                                <a href="{{ path('shop.category', { slug: category.slug }) }}">{{ category.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
                 <ul data-title="Mentions légales">
                     <li><a href="#">CGV</a></li>
                     <li><a href="#">Mentions légales</a></li>

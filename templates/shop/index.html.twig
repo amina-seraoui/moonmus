@@ -5,13 +5,15 @@
 {% block body %}
     <main id="shop">
         <nav class="nav-shop">
-            <ul>
-                <li class="active"><a href="{{ path('shop.index') }}">Femmes</a></li>
-                <li><a href="{{ path('shop.index') }}">Hommes</a></li>
-                <li><a href="{{ path('shop.index') }}">Maison</a></li>
-                <li><a href="{{ path('shop.index') }}">Livres</a></li>
-                <li><a href="{{ path('shop.index') }}">Soins</a></li>
-            </ul>
+            {% if (categories) %}
+                <ul>
+                    {% for category in categories %}
+                        <li {{ (category_actual is defined and category_actual.slug == category.slug) ? 'class="active"' : null }}>
+                            <a href="{{ path('shop.category', { slug: category.slug }) }}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </nav>
 
         <section>
