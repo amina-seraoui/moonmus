@@ -17,7 +17,8 @@
         </nav>
 
         <section>
-            <h1>Femmes</h1>
+            <h1>{{ category_actual is defined ? category_actual.name : 'Boutique' }}</h1>
+
             <div id="products">
                 <article class="product">
                     <img src="{{ asset('assets/img/une.png') }}" alt="Nom du produit" width="200" height="300">

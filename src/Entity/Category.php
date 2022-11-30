@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Vich\UploaderBundle\Entity\File as EmbeddedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 #[UniqueEntity('slug')]
@@ -26,6 +27,7 @@ class Category
     #[ORM\Column(length: 60)]
     private ?string $name = null;
 
+    #[Assert\File(mimeTypes: ['image/jpeg', 'image/png'])]
     #[Vich\UploadableField(mapping: 'categories', fileNameProperty: 'fileName')]
     private ?File $imageFile = null;
 
